@@ -1,0 +1,27 @@
+body {
+    background-image: none;
+}
+
+section {
+    opacity: 1.0;
+    overflow: auto;
+}
+
+figure {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+    figure img {
+        height: 30vh;
+    }
+
+section:nth-of-type(even) figure {
+    flex-direction: row-reverse;
+}
+
+figure h2, figure figcaption {
+    margin-left: 20px;
+    margin-right: 20px;
+}
