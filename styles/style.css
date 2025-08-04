@@ -37,6 +37,10 @@ nav a {
     text-decoration: none;
     color: #436b15;
 }
+.navlinks {
+    display: flex;
+    justify-content: center;
+    }
 
 main, aside, footer, section {
     background-color: white;
