@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Collections - Museum</title>
+  <link rel="stylesheet" href="styles/style.css">
+
+  <style type="text/css">
+
+.collection-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 2rem;
+}
+
+.artifact-img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.field-group {
+  margin-bottom: 1.5rem;
+}
+
+.field-group p {
+  margin: 0.5rem 0;
+  line-height: 1.4;
+}
+
+.collection-item h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+.artifact-details h2 {
+  width: 100%;
+  margin-top: 0;
+  font-size: 1.8rem;
+  flex-basis: 100%;
+}
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Museum of Cultural Memory</h1>
+    <nav>
+      <button onclick="location.href='../index.html'">Home</button>
+      <button onclick="location.href='staff.html'">Staff</button>
+      <button onclick="location.href='collections.html'">Collections</button>
+      <button onclick="location.href='admin.html'">Login</button>
+    </nav>
+  </header>
+
+  <div class="submenu">
+    <button onclick="showSection('archaeology')">Archaeology</button>
+    <button onclick="showSection('anthropology')">Anthropology</button>
+    <button onclick="showSection('histories')">Histories</button>
+  </div>
+
+  <main>
+    <section id="archaeology" class="collection-section">
+
+      <h2>Object Name</h2>
+      <div class="collection-item">
+  
+        <img src="" style="width:250px;" alt="" class="artifact-img" />
+      
+        <div class="field-group">
+          <p>Column 1</p>
+        </div>
+      
+        <div class="field-group">
+          <p>Column 2</p>
+        </div>
+      
+        <div class="field-group">
+          <p>Column 3</p>
+        </div>
+      
+        <!-- Reserved space for future interpretation modal (Phase 4) -->
+        <!-- <button class="interpret-btn">Read Cultural Story</button> -->
+      </div>
+    
+      
+    </section>
+
+
+    
+    <section id="anthropology" class="collection-section" style="display:none;">
+      
+      <!-- Use the same Object Constructions in this section -->
+
+    </section>
+    <section id="histories" class="collection-section" style="display:none;">...</section>
+  </main>
+
+  <script>
+    function showSection(section) {
+      const sections = document.querySelectorAll('.collection-section');
+      sections.forEach(s => s.style.display = 'none');
+      document.getElementById(section).style.display = 'block';
+    }
+  </script>
+</body>
+</html>

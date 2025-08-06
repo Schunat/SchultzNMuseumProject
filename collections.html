@@ -1,35 +1,196 @@
 <!DOCTYPE html>
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="UTF-8">
-    <title>The Eyptian Museum</title>
-    <meta name="robots" content="noindex, nofollow">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/staff.css">
-</head>
-<body>
-    <header>
-        <h1>The Eyptian Museum</h1>
-        <nav>
-            <div class="navlinks">
-                         <ul>
-                <li><button onclick="location.href='index.html'">Home</button></li>
-                <li><button onclick="location.href='staff.html'">Staff</button></li>
-                <li><button onclick="location.href='collections.html'">Collections</button></li>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="author" content="[Natalie Schultz]">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>The Eyptian Museum</title>
+      <meta name="robots" content="noindex, nofollow">
+      <link rel="stylesheet" href="styles/style.css">
+      <link rel="stylesheet" href="styles/collection.css">
+   </head>
+   <body>
+      <header>
+         <h1>The Eyptian Museum</h1>
+         <nav>
+            <ul class="navlinks">
+               <li><button onclick="location.href='index.html'">Home</button></li>
+               <li><button onclick="location.href='staff.html'">Staff</button></li>
+               <li><button onclick="location.href='collections.html'">Collections</button></li>
+               <li><button onclick="location.href='login.html'">Login</button></li>
             </ul>
+         </nav>
+      </header>
+      <main>
+         <div class="submenu">
+            <button onclick="showSection('archaeology')">Archaeology</button>
+            <button onclick="showSection('anthropology')">Anthropology</button>
+            <button onclick="showSection('histories')">Histories</button>
+         </div>
+         <section id="archaeology" class="collection-section">
+            <div class="collection-item">
+               <div class="field-group-1">
+                  <h2>Ceremonial Vessel</h2>
+                  <img src="images/collections/Egyptian_vase.jpg" style="width:250px;" alt="Black and gold Egyptian jug with horizontal stripes and a handle" class="artifact-img">
+               </div>
+               <div class="field-group">
+                  <p><span>Material:</span> Crushed limestone and sand-tempered clay mixture.</p>
+                  <p><span>Size/Weight/Shape:</span> Approximately 30 cm tall and 20 cm wide, slender neck, rounded midsection. Weighs roughly 5-7 kg.</p>
+                  <p><span>Preservation State:</span> Slight erosion, primarily intact, erosion at rim and base, faded striping likely due to burial abrasion. </p>
+                  <p><span>Location Found:</span> Western banks of the Nile river in Egypt, unearthed near a necropolis, a probable burial site for nobility.</p>
+               </div>
+               <div class="field-group">
+                  <p><span>Likely Purpose:</span> Used as a ritualistic container, stored scented oils or grains. Patterning implies ceremonial, not daily use. </p>
+                  <p><span>Evidence of Use:</span> Both olive oil and myrrh microscopic residue was detected. Abrasions on the exterior suggest frequent handling.</p>
+                  <p><span>Manufacture Clues:</span> Interior oil marks denote hand-made construction.</p>
+               </div>
+               <div class="field-group">
+                  <p><span>Found With:</span> Faience beads and linen fabric fragments.</p>
+                  <p><span>Burial or Habitat Context:</span> Burial location below a sandstone table in a tomb chamber.Soil strata data denote a dry season.</p>
+                  <p><span>Symbolism:</span> Coloring contrast, black and sand color, symbolize life and death, sun and shadow.</p>
+                  <p><span>Comparison:</span> - Similar to Middle Kingdom vessels found in Thebes, but stylistic expressions similar to Lower Egyptian workshops. The stripe motif echo Mesa temple wall friezes.
+                  </p>
+               </div>
+               <!-- Reserved space for future interpretation modal (Phase 4) -->
+               <!-- <button class="interpret-btn">Read Cultural Story</button> -->
             </div>
-            <div class="navlinks">
-            <ul>
-                <li><button onclick="location.href='archeology.html'">Archeology</button></li>
-                <li><button onclick="location.href='anthropology.html'">Anthropology</button></li>
-                <li><button onclick="location.href='history.html'">History</button></li>
-            </ul>
+            <div class="collection-item">
+               <div class="field-group-1">
+                  <h2>Kohl Pot</h2>
+                  <img src="images/collections/Kohl_pot.jpg" style="width:250px;" alt="White alabaster pot container with pink veining used for Kohl eyeliner makeup" class="artifact-img">
+               </div>
+               <div class="field-group">
+                  <p><span>Material:</span> Alabaster, hand carved with metal tools, known for its durability.</p>
+                  <p><span>Size/Weight/Shape:</span> Approximate height 8 cm and 6 cm in diameter, weight 300 grams: rounded body, flat base, short neck.</p>
+                  <p><span>Preservation State:</span> Surface veining intact, minimal erosion suggesting low post depositional damage.</p>
+                  <p><span>Location Found:</span> Discovered near Saqqara necropolis, a private tomb.</p>
+               </div>
+               <div class="field-group">
+                  <p><span>Likely Purpose:</span> Cosmetic container, used kohl for eyeliner and sun glare protection.</p>
+                  <p><span>Evidence of Use:</span> Microscopic evidence of palm oil, malachite and galena-kohl ingredients.</p>
+                  <p><span>Manufacture Clues:</span> Tool markings indicate hollowing with a hand-held drill.</p>
+               </div>
+               <div class="field-group">
+                  <p><span>Found With:</span> Shell palette, bronze applicator stick and reed brush fragments.</p>
+                  <p><span>Burial or Habitat Context:</span> Discovered within a noble female burial chamber.</p>
+                  <p><span>Symbolism:</span> Kohl was believed to have magical protective power, the jar was valuable and represented status.</p>
+                  <p><span>Comparison:</span> Similar to vessels discovered in teh Theban tombs but higher lead content implies regional variation. </p>
+               </div>
+               <!-- Reserved space for future interpretation modal (Phase 4) -->
+               <!-- <button class="interpret-btn">Read Cultural Story</button> -->
             </div>
-        </nav>
-    </header>
-    <footer>
-        <p>This is a fictitous website created for academic purposes.</p>
-    </footer>
-</body>
+          
+            <div class="collection-item">
+               <div class="field-group-1">
+                  <h2>Bronze kohl applicator</h2>
+                  <img src="images/collections/Bronze_kohl_stick_applicator.png" style="width:250px;" alt="Small verdigris bronze stick, used for applying kohl makeup" class="artifact-img">
+               </div>
+               <div class="field-group">
+                  <p><span>Material:</span> Made from bronze, a copper alloy, cosmetic tool in New Kingdom Egypt </p>
+                  <p><span>Size/Weight/Shape:</span> Likely less than 15 cm in length, elongated and slender with a tapered tip, cylindrical with flattened end for grip.</p>
+                  <p><span>Preservation State:</span> Appearance of surface corrosion, patina suggests long-term burial, fair condition with visible wear.</p>
+                  <p><span>Location Found:</span> Excavated from a tomb or domestic context given its cosmetic use.</p>
+               </div>
+               <div class="field-group">
+                  <p><span>Likely Purpose:</span> Used to apply powdered galena, kohl, or other mineral based pigments for eye make-up.</p>
+                  <p><span>Evidence of Use:</span> Tip shows residue from use, evidence of microscopic traces of pigment.</p>
+                  <p><span>Manufacture Clues:</span> Hammered or cast bronze with hand-finishing.</p>
+               </div>
+               <div class="field-group">
+                  <p><span>Found With:</span> Vessels, cosmetic palettes, and mirrors used in burial assemblages.</p>
+                  <p><span>Burial or Habitat Context:</span> Likely excavated from a tomb reflected in the importance of appearance in the afterlife.</p>
+                  <p><span>Symbolism:</span> Kohl application had aesthetic and spiritual value, warding off evil.</p>
+                  <p><span>Comparison:</span> This specimen is similar to other cosmetic tools from the New Kingdom.</p>
+               </div>
+               <!-- Reserved space for future interpretation modal (Phase 4) -->
+               <!-- <button class="interpret-btn">Read Cultural Story</button> -->
+            </div>
+         </section>
+         <section id="anthropology" class="collection-section" style="display:none;">
+            <div class="collection-item">
+               <div class="field-group-1">
+                  <h2>Palm Leaf Sandals</h2>
+                  <img src="images/collections/Palm_leaf_sandals.jpg" style="width:250px;" alt="Sand color handwoven Egyptian sandals" class="artifact-img">
+               </div>
+               <div class="field-group">
+                  <p><span>Material:</span> Palm fiber and braided halfa grass. </p>
+                  <p><span>Size/Weight/Shape:</span>Varies. Approximately 30 cm long, 12 cm wide, 150 grams. Shape is oval, flat soled, single toe strap attachment.</p>
+                  <p><span>Preservation State:</span>Well preserved with minor fraying, slight discoloration-suggest storage in dry climate or tomb interment.</p>
+                  <p><span>Location Found:</span>Discovered in a shaft tomb near the Theban Necropolis, sealed inside a wooden box.</p>
+               </div>
+               <div class="field-group">
+                  <p><span>Likely Purpose:</span> Everyday use, possibly worn during funerary rites due to well preserved state.</p>
+                  <p><span>Evidence of Use:</span> Heel indentation and stains from wear, embedded dust particles between weave layers suggest outdooor use. </p>
+                  <p><span>Manufacture Clues:</span> Workshop level production, consistent fiber thickness and symmetric weaving.</p>
+               </div>
+               <div class="field-group">
+                  <p><span>Found With:</span> Faience bead necklace, pottery fragments and a tattered linen pouch.</p>
+                  <p><span>Burial or Habitat Context:</span> Positioned beside the body, sandals aligned with ankles.</p>
+                  <p><span>Symbolism:</span> Sandals symbolized purification, protection and preparation to walk in the afterlife with the gods.</p>
+                  <p><span>Comparison:</span> More modest than gilded leather examples from royalty tombs but structurally similar to sandals from Deir el-Medina artisan burials.</p>
+               </div>
+               <!-- Use the same Object Constructions in this section -->
+            </div>
+            <div class="collection-item">
+               <div class="field-group-1">
+                  <h2>Egyptian Iron Dagger</h2>
+                  <img src="images/collections/Iron_dagger.png" style="width:250px;" alt="Iron dagger" class="artifact-img">
+               </div>
+               <div class="field-group">
+                  <p><span>Material:</span> Forged iron, with surface pitting and oxidation. Handle composition is gold, glass, colored stone or faience inlays.</p>
+                  <p><span>Size/Weight/Shape:</span> Estimated length 20-30 cm, moderate weight for handheld use, long slender, tapered tip with doubl-edge blade. Handle is richly decorated, cylindrical.</p>
+                  <p><span>Preservation State:</span> Shows wear, rust, handle is pristine, clear and detailed ornamentation.</p>
+                  <p><span>Location Found:</span> Not specified. Likely an Egyptain royal or military grave due to stones and craftsmanship.</p>
+               </div>
+               <div class="field-group">
+                  <p><span>Likely Purpose:</span> Ceremonial weapon, reserved for burial assemblage.</p>
+                  <p><span>Evidence of Use:</span> Surface abrasion may suggest actual or symbolic use.</p>
+                  <p><span>Manufacture Clues:</span> High level of craftsmanship, iron is hammered or forged, joined components with precision inlay work.</p>
+               </div>
+               <div class="field-group">
+                  <p><span>Found With:</span> Jewelery, shields, and ceremonial regalia, part of a grave groupoing.</p>
+                  <p><span>Burial or Habitat Context:</span> Most likely a tomb setting.</p>
+                  <p><span>Symbolism:</span> Iron blade is linked with meteoric iron which was believed to hold celestial power. The god and glass handle symbolized status, divine protection and represented solar cults.</p>
+                  <p><span>Comparison:</span> Similar ceremonial weapons were discovered in Assyrian and Hittite tombs.</p>
+               </div>
+               <!-- Use the same Object Constructions in this section -->
+            </div>
+            <div class="collection-item">
+               <div class="field-group-1">
+                  <h2>Ceremonial Palette Fragment</h2>
+                  <img src="images/collections/Ceremonial_Palette_Fragment.png" style="width:250px;" alt="Black and gold Egyptian jug with horizontal stripes and a handle" class="artifact-img">
+               </div>
+               <div class="field-group">
+                  <p><span>Material:</span> Siltstone, dark green-brown, common in Naqada artifacts.</p>
+                  <p><span>Size/Weight/Shape:</span> Between 10 to 15 cm wide, form is flat, lightweight and portable.</p>
+                  <p><span>Preservation State:</span> Chipped edges, weathered surface, patterns intact.</p>
+                  <p><span>Location Found:</span> Egyptian burial site, posibly Gerzeh or Abydos in upper Egypt.</p>
+               </div>
+               <div class="field-group">
+                  <p><span>Likely Purpose:</span> Possibly for pigment mixing during rituals, ceremonial object.</p>
+                  <p><span>Evidence of Use:</span> No residue from substances, shallow groove polishing, surface wear.</p>
+                  <p><span>Manufacture Clues:</span> Carved stone with fluted grooves and abstract patterns.</p>
+               </div>
+               <div class="field-group">
+                  <p><span>Found With:</span> Grave items like pottery, flint tools and ivory figurines.</p>
+                  <p><span>Burial or Habitat Context:</span> Symbolic placement beside the noble deceased body, part of grave goods assemblage.</p>
+                  <p><span>Symbolism:</span> Ladder-like motif may represent ascension; fluted grooves echo plant motifs or rays of light</p>
+                  <p><span>Comparison:</span> Similar to hunter palettes but with abstract design.</p>
+               </div>
+               <!-- Use the same Object Constructions in this section -->
+            </div>
+         </section>
+         
+      </main>
+      <script>
+         function showSection(section) {
+           const sections = document.querySelectorAll('.collection-section');
+           sections.forEach(s => s.style.display = 'none');
+           document.getElementById(section).style.display = 'block';
+         }
+      </script>
+      <footer>
+         <p>This is a fictitous website created for academic purposes.The content on this site was conceived by a human and created by AI. The images were created by AI and curated, edited, reviewed, verfied validated and augmented by a human.</p>
+      </footer>
+   </body>
 </html>

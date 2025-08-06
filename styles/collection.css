@@ -1,27 +1,44 @@
-body {
-    background-image: none;
-}
-
-section {
-    opacity: 1.0;
-    overflow: auto;
-}
-
-figure {
+.collection-item {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 2rem;
 }
 
-    figure img {
-        height: 30vh;
+.artifact-img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.field-group {
+    margin-bottom: 1.5rem;
+}
+
+    .field-group p {
+        margin: 0.5rem 0;
+        line-height: 1.4;
     }
 
-section:nth-of-type(even) figure {
-    flex-direction: row-reverse;
+.collection-item h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
 }
-
-figure h2, figure figcaption {
-    margin-left: 20px;
-    margin-right: 20px;
+.collection-item span {
+    font-weight: bold;
+  }
+.artifact-details h2 {
+    width: 100%;
+    margin-top: 0;
+    font-size: 1.8rem;
+    flex-basis: 100%;
+}
+section, div.field-group-1 {
+    display: flex;
+    flex-direction: column;
 }
