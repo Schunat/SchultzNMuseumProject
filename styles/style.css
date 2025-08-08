@@ -52,7 +52,7 @@ button {
 
 main, aside, footer, section {
     background-color: white;
-    opacity: 0.9;
+    /*opacity: 0.9;*/
     padding: 20px;
     border-radius: 8px;
     box-sizing: border-box;
