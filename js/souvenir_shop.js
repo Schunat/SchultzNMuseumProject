@@ -30,3 +30,12 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 }
+
+// Select all cart buttons
+const cartButtons = document.querySelectorAll(".add-cart");
+cartButtons.forEach(button => {
+    button.addEventListener("click",() => {
+        const itemId = button.dataset.id;
+        alert(`Added ${itemId} to cart` );
+    })
+} )
