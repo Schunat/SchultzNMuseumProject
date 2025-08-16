@@ -311,7 +311,7 @@
          </section>
       </main>
       <!-- keep your existing overlay + .modal/.modal-content styles -->
-      <div class="modal" id="modal" style="display:none" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal" id="modal" style="display:none" role="dialog" aria-modal="true" aria-label="">
          <div class="modal-content">
             <button class="close-modal" aria-label="Close">x</button>
             <div id="modal-body"></div>
@@ -319,7 +319,7 @@
          </div>
       </div>
       <div class="modal-item" id="modal-text-vessel" hidden>
-         <h2 id="modal-title">Ceremonial Vessel</h2>
+         <h2 class="modal-title">Ceremonial Vessel</h2>
          <p>3,800 Years BP  Western Nile Necropolis  Sand-Tempered Clay.</p>
          <p>Material: Volcanic basalt, lunar silicate, fused ash.</p>
          <p>Function (Hypothesized): Ritual container for oils or grains.</p>
@@ -329,7 +329,7 @@
          <p>Associated finds include faience beads and linen fragments, reinforcing its ceremonial role. The vessel's color contrast, black and sand, symbolizes life and death, sun and shadow, echoing dualistic themes in Egyptian cosmology. Though similar in form to Middle Kingdom vessels from Thebes, its stylistic details align more closely with Lower Egyptian workshops. The stripe motif parallels friezes found on Mesa temple walls, suggesting a shared symbolic grammar across regions.</p>
       </div>
       <div class="modal-item" id="modal-text-pot" hidden>
-         <h2 id="modal-title">Kohl Pot</h2>
+         <h2 class="modal-title">Kohl Pot</h2>
          <p>3,200 Years BP Saqqara Necropolis</p>
          <p>Material: Alabaster, hand carved with metal tools.</p>
          <p>Function (Hypothesized): Cosmetic container for kohl application.</p>
@@ -338,7 +338,7 @@
          <p>Like Theban examples, this vessel's higher lead content suggests regional variation in recipes and techniques. Its presence in a private tomb reflects the intersection of beauty, ritual, and identity in elite Egyptian burial practices.</p>
       </div>
       <div class="modal-item" id="modal-text-stick" hidden>
-         <h2 id="modal-title">Bronze Kohl Applicator</h2>
+         <h2 class="modal-title">Bronze Kohl Applicator</h2>
          <p>22,000 Years BP  Dorsai Scarp Ridge  Composite Stone</p>
          <p>Material: Made from bronze, a copper alloy, cosmetic tool in New Kingdom Egypt</p>
          <p>Function (Hypothesized): Ceremonial or calendrical archway</p>
@@ -347,7 +347,7 @@
          <p>The keystone features a 7-point symmetrical symbol array, possibly calendrical, and was carved with high accuracy using materials not native to the site. Surrounding finds (charcoal flecks, obsidian bead fragments, crushed pigment) point to ritual activity and intentional deposition. While it shares geometric similarities with the later standing stones at Aetha-Zul, this fragment displays a distinct symbolic grammar and a more advanced material blend, indicating a unique, localized cultural expression.</p>
       </div>
       <div class="modal-item" id="modal-text-sandals" hidden>
-         <h2 id="modal-title">Palm Leaf Sandals</h2>
+         <h2 class="modal-title">Palm Leaf Sandals</h2>
          <p>22,000 Years BP  Dorsai Scarp Ridge  Composite Stone</p>
          <p>Material: Palm fiber and braided halfa grass.</p>
          <p>Function (Hypothesized): Ceremonial or calendrical archway</p>
@@ -356,7 +356,7 @@
          <p>The keystone features a 7-point symmetrical symbol array, possibly calendrical, and was carved with high accuracy using materials not native to the site. Surrounding finds (charcoal flecks, obsidian bead fragments, crushed pigment) point to ritual activity and intentional deposition. While it shares geometric similarities with the later standing stones at Aetha-Zul, this fragment displays a distinct symbolic grammar and a more advanced material blend, indicating a unique, localized cultural expression.</p>
       </div>
       <div class="modal-item" id="modal-text-dagger" hidden>
-         <h2 id="modal-title">Egyptian Iron Dagger</h2>
+         <h2 class="modal-title">Egyptian Iron Dagger</h2>
          <p>22,000 Years BP  Dorsai Scarp Ridge  Composite Stone</p>
          <p>Material: Forged iron, with surface pitting and oxidation. Handle composition is gold, glass, colored stone or faience inlays.</p>
          <p>Function (Hypothesized): Ceremonial or calendrical archway</p>
@@ -365,7 +365,7 @@
          <p>The keystone features a 7-point symmetrical symbol array, possibly calendrical, and was carved with high accuracy using materials not native to the site. Surrounding finds (charcoal flecks, obsidian bead fragments, crushed pigment) point to ritual activity and intentional deposition. While it shares geometric similarities with the later standing stones at Aetha-Zul, this fragment displays a distinct symbolic grammar and a more advanced material blend, indicating a unique, localized cultural expression.</p>
       </div>
       <div class="modal-item" id="modal-text-palette" hidden>
-         <h2 id="modal-title">Ceremonial Palette Fragment</h2>
+         <h2 class="modal-title">Ceremonial Palette Fragment</h2>
          <p>22,000 Years BP  Dorsai Scarp Ridge  Composite Stone</p>
          <p>Material: Siltstone, dark green-brown, common in Naqada artifacts.</p>
          <p>Function (Hypothesized): Ceremonial or calendrical archway</p>
@@ -390,8 +390,10 @@
            function openFrom(selector, trigger){
              const src = document.querySelector(selector);
              if (!src) { console.warn('Missing modal content:', selector); return; }
+             const titleText = src.querySelector('.modal-title').textContent;
              modalBody.innerHTML = src.innerHTML;        // inject text HTML
              modal.style.display = 'block';
+             modal.setAttribute('aria-label', titleText); // set ARIA label for accessibility
              lastTrigger = trigger || null;
              closeBtn.focus();
              document.body.style.overflow = 'hidden';    // no scroll under modal
